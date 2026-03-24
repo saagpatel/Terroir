@@ -1,0 +1,33 @@
+namespace Terroir;
+
+table FlavorCell {
+  // 12 flavor dimensions, normalized 0.0–1.0
+  earthy:      float;
+  mineral:     float;
+  bright:      float;
+  citric:      float;
+  floral:      float;
+  herbaceous:  float;
+  smoky:       float;
+  woody:       float;
+  saline:      float;
+  tannic:      float;
+  vegetal:     float;
+  aromatic:    float;
+  // Source metadata (used for More Detail context)
+  soil_class:     ubyte;   // 0–28 FAO soil classes mapped to 6 archetypes
+  climate_zone:   ubyte;   // 0–30 Köppen codes mapped to 8 bands
+  ndvi_band:      ubyte;   // 0=barren, 1=sparse, 2=grassland, 3=shrubland, 4=dense forest
+  elevation_band: ubyte;   // 0=sea level, 1=0–500m, 2=500–1500m, 3=1500–3000m, 4=3000m+, 5=4000m+
+  is_ocean:       bool;
+  ocean_zone:     ubyte;   // 0=polar (|lat|>60), 1=temperate (30–60), 2=tropical (<30) — valid if is_ocean
+}
+
+table FlavorGrid {
+  cells:     [FlavorCell];  // Length = 259,200 (360 lat bands × 720 lon bands)
+  lat_cells: uint;          // 360
+  lon_cells: uint;          // 720
+  version:   uint;          // Schema version — increment on breaking changes
+}
+
+root_type FlavorGrid;

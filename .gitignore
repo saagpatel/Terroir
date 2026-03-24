@@ -1,0 +1,28 @@
+# Data pipeline
+data-pipeline/raw/
+data-pipeline/intermediate/
+data-pipeline/output/
+data-pipeline/Terroir/
+data-pipeline/venv/
+*.npy
+terroir.bin
+terroir-ios/Terroir/Resources/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# iOS (future)
+*.xcuserdata
+DerivedData/
+build/

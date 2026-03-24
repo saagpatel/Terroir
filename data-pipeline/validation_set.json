@@ -1,0 +1,122 @@
+[
+	{
+		"name": "Burgundy, France",
+		"lat": 47.0,
+		"lon": 4.85,
+		"expected_top3": ["earthy", "mineral", "tannic"]
+	},
+	{
+		"name": "Bordeaux, France",
+		"lat": 44.8,
+		"lon": -0.58,
+		"expected_top3": ["earthy", "tannic", "woody"]
+	},
+	{
+		"name": "Marlborough, NZ",
+		"lat": -41.5,
+		"lon": 173.9,
+		"expected_top3": ["bright", "herbaceous", "citric"]
+	},
+	{
+		"name": "Napa Valley, CA",
+		"lat": 38.5,
+		"lon": -122.4,
+		"expected_top3": ["earthy", "tannic", "aromatic"]
+	},
+	{
+		"name": "Barossa Valley, AU",
+		"lat": -34.5,
+		"lon": 139.0,
+		"expected_top3": ["earthy", "smoky", "tannic"]
+	},
+	{
+		"name": "Mosel, Germany",
+		"lat": 50.0,
+		"lon": 7.0,
+		"expected_top3": ["mineral", "bright", "citric"]
+	},
+	{
+		"name": "Ethiopian Highlands",
+		"lat": 6.8,
+		"lon": 39.5,
+		"expected_top3": ["floral", "citric", "aromatic"]
+	},
+	{
+		"name": "Colombian Coffee Belt",
+		"lat": 4.7,
+		"lon": -74.8,
+		"expected_top3": ["bright", "citric", "floral"]
+	},
+	{
+		"name": "Sumatra, Indonesia",
+		"lat": 3.0,
+		"lon": 98.5,
+		"expected_top3": ["earthy", "woody", "herbaceous"]
+	},
+	{
+		"name": "Darjeeling, India",
+		"lat": 27.0,
+		"lon": 88.3,
+		"expected_top3": ["floral", "aromatic", "bright"]
+	},
+	{
+		"name": "Assam, India",
+		"lat": 26.5,
+		"lon": 94.5,
+		"expected_top3": ["earthy", "tannic", "vegetal"]
+	},
+	{
+		"name": "Sahara Desert",
+		"lat": 23.0,
+		"lon": 13.0,
+		"expected_top3": ["mineral", "earthy", "smoky"]
+	},
+	{
+		"name": "Amazon Rainforest",
+		"lat": -3.0,
+		"lon": -60.0,
+		"expected_top3": ["vegetal", "floral", "aromatic"]
+	},
+	{
+		"name": "Scottish Highlands",
+		"lat": 57.0,
+		"lon": -4.5,
+		"expected_top3": ["smoky", "earthy", "mineral"]
+	},
+	{
+		"name": "Himalayan Plateau",
+		"lat": 30.0,
+		"lon": 83.0,
+		"expected_top3": ["mineral", "bright", "citric"]
+	},
+	{
+		"name": "Tuscany, Italy",
+		"lat": 43.5,
+		"lon": 11.2,
+		"expected_top3": ["earthy", "herbaceous", "aromatic"]
+	},
+	{
+		"name": "Rhône Valley, France",
+		"lat": 44.5,
+		"lon": 4.75,
+		"expected_top3": ["earthy", "smoky", "aromatic"]
+	},
+	{
+		"name": "Champagne, France",
+		"lat": 49.0,
+		"lon": 4.0,
+		"expected_top3": ["mineral", "bright", "citric"]
+	},
+	{
+		"name": "North Atlantic Ocean",
+		"lat": 45.0,
+		"lon": -30.0,
+		"expected_top3": ["saline", "mineral", "bright"]
+	},
+	{
+		"name": "Pacific Off Oregon",
+		"lat": 45.0,
+		"lon": -130.0,
+		"expected_top3": ["saline", "mineral", "bright"]
+	}
+]
