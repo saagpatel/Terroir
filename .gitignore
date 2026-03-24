@@ -6,6 +6,7 @@ data-pipeline/Terroir/
 data-pipeline/venv/
 *.npy
 terroir.bin
+terroir-ios/Terroir/Resources/
 
 # Python
 __pycache__/

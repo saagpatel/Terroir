@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047A696C5A256BBB2526581A /* EnrichmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808B2BE2F376DE56D0BCB845 /* EnrichmentData.swift */; };
+		06B5961DE2FDBA09516FCDC5 /* OceanHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5B74B645A6452ED800523 /* OceanHandler.swift */; };
+		1220FDF510DDB726CA52E543 /* TemplateEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76095E56B235CFB3F6FD555A /* TemplateEngine.swift */; };
+		1F870F58DED034882E7AA273 /* GlobeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300168237FC933C0B1E8A852 /* GlobeScene.swift */; };
+		2C1F24C5495B49003EF939B7 /* overlay_vegetation.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3E44D31AB8DEF0E22FAC1F /* overlay_vegetation.png */; };
+		3C88BFC0487AAF01E6F5C0BC /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA893F483963D013F0135A9 /* ShareCardView.swift */; };
+		43AF73E82CE391592E684AD6 /* GeoCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37287F85BDDF28F89CDB86 /* GeoCoordinate.swift */; };
+		44FC81075FF303879BB5CF2E /* FlavorLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FF38F28740A3988842844 /* FlavorLookup.swift */; };
+		45E98F0BF7998EA937E6BD60 /* globe_base.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9028E7C76A8F8F653D7F221 /* globe_base.jpg */; };
+		4D004551865FA161692FE255 /* TerroirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3E27F1F7EB8344700CF279 /* TerroirApp.swift */; };
+		4D1EF5056CB80CF787809C19 /* overlay_climate.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D73445C6B80EC8F433F8F3 /* overlay_climate.png */; };
+		5CEAC275652FC2836BE05A9C /* overlay_soil.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1E6F4951792459AE089A34 /* overlay_soil.png */; };
+		6A2D212DFE963ADCDFA17837 /* terroir.bin in Resources */ = {isa = PBXBuildFile; fileRef = BBDE83E00E2DB47DBDCC3D54 /* terroir.bin */; };
+		77075E3DB717C5DD36564814 /* OceanHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC8D3FE4AF973870E5A313 /* OceanHandlerTests.swift */; };
+		895DA3E43CC79B1A4341C482 /* EnrichmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E79A75C2C1F5540FE31C578 /* EnrichmentService.swift */; };
+		8A8BB5B8F1E6293C5FF63699 /* FlavorVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08238812B86F523E6A09D2D6 /* FlavorVector.swift */; };
+		8B2962F28749AA78954836FF /* GlobeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA64E804AFE1E425C26534 /* GlobeView.swift */; };
+		8D114C7FAA57EC7B0D5AF70E /* FlavorLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260841B0FEE228336FDB17C9 /* FlavorLookupTests.swift */; };
+		9E9C9B76E41A507F80A8BA1A /* terroir_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DC54F27118F375A39764DC /* terroir_generated.swift */; };
+		A68894AEFD38E0C44C04F8D7 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 5516A5E122E79203C58180F6 /* FlatBuffers */; };
+		AF3FFE8A5F4C4810055C37C9 /* FlavorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ECAC1DA0519C5DC216841 /* FlavorCardView.swift */; };
+		B406FB23B15F6B02A2ABE6D5 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19774F8B322BCB2CF0654085 /* LocationService.swift */; };
+		C8A8C4894756412F1B61B527 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDE8565A3F6AB16909284 /* AppState.swift */; };
+		CA483298BCB837C87C1C1B44 /* GeoCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEAFF41089BF9E12300FB9F /* GeoCoordinateTests.swift */; };
+		CC08137F861C38A8CE0DBFB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10533A0BE9A95E2FE97E6FE6 /* Assets.xcassets */; };
+		D086B86562B83D872AF8FB3B /* TapToCardFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61F7E62380B15785C2B313 /* TapToCardFlowTests.swift */; };
+		D33853F5CABB8BDD0012CCF6 /* RadarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37141BB4E5BBDC5D4018B9AF /* RadarChartView.swift */; };
+		D5447D7B033A53BD7CE5A0E4 /* FlavorCardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AB05E3C78D69F8F9FB7EB7 /* FlavorCardDetailView.swift */; };
+		DC240E4825678B7889EEBC2E /* TemplateEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03619D6C90717EB43513EF75 /* TemplateEngineTests.swift */; };
+		F721EABD58AF58CBB18A30F6 /* FlavorDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA21FD73CAA3A32C4DE9569 /* FlavorDimension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F1D683957CCEABC428312E1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F16CF9434975DD211656FB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 460F17FA0BE75656E2160CBF;
+			remoteInfo = Terroir;
+		};
+		FC560A20F496A44C0F0F1C89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F16CF9434975DD211656FB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 460F17FA0BE75656E2160CBF;
+			remoteInfo = Terroir;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03619D6C90717EB43513EF75 /* TemplateEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEngineTests.swift; sourceTree = "<group>"; };
+		08238812B86F523E6A09D2D6 /* FlavorVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorVector.swift; sourceTree = "<group>"; };
+		0BA21FD73CAA3A32C4DE9569 /* FlavorDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorDimension.swift; sourceTree = "<group>"; };
+		10533A0BE9A95E2FE97E6FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19774F8B322BCB2CF0654085 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		260841B0FEE228336FDB17C9 /* FlavorLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorLookupTests.swift; sourceTree = "<group>"; };
+		2C9FF38F28740A3988842844 /* FlavorLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorLookup.swift; sourceTree = "<group>"; };
+		2EDA64E804AFE1E425C26534 /* GlobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeView.swift; sourceTree = "<group>"; };
+		2FA893F483963D013F0135A9 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
+		300168237FC933C0B1E8A852 /* GlobeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeScene.swift; sourceTree = "<group>"; };
+		37141BB4E5BBDC5D4018B9AF /* RadarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartView.swift; sourceTree = "<group>"; };
+		37D73445C6B80EC8F433F8F3 /* overlay_climate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_climate.png; sourceTree = "<group>"; };
+		3B1610E4A51E4DC7DAFB0A58 /* TerroirUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TerroirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C246ACB806204FF4EC580EA /* Terroir.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Terroir.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D61F7E62380B15785C2B313 /* TapToCardFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapToCardFlowTests.swift; sourceTree = "<group>"; };
+		4E79A75C2C1F5540FE31C578 /* EnrichmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrichmentService.swift; sourceTree = "<group>"; };
+		7415140AA5E320E99A2E790F /* TerroirTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TerroirTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76095E56B235CFB3F6FD555A /* TemplateEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateEngine.swift; sourceTree = "<group>"; };
+		808B2BE2F376DE56D0BCB845 /* EnrichmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrichmentData.swift; sourceTree = "<group>"; };
+		85AC8D3FE4AF973870E5A313 /* OceanHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanHandlerTests.swift; sourceTree = "<group>"; };
+		8CE5B74B645A6452ED800523 /* OceanHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanHandler.swift; sourceTree = "<group>"; };
+		A34EDE8565A3F6AB16909284 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A49ECAC1DA0519C5DC216841 /* FlavorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorCardView.swift; sourceTree = "<group>"; };
+		A4AB05E3C78D69F8F9FB7EB7 /* FlavorCardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorCardDetailView.swift; sourceTree = "<group>"; };
+		AD3E44D31AB8DEF0E22FAC1F /* overlay_vegetation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_vegetation.png; sourceTree = "<group>"; };
+		BBDE83E00E2DB47DBDCC3D54 /* terroir.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = terroir.bin; sourceTree = "<group>"; };
+		C1DC54F27118F375A39764DC /* terroir_generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = terroir_generated.swift; sourceTree = "<group>"; };
+		CFEAFF41089BF9E12300FB9F /* GeoCoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoordinateTests.swift; sourceTree = "<group>"; };
+		D9028E7C76A8F8F653D7F221 /* globe_base.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = globe_base.jpg; sourceTree = "<group>"; };
+		DC2ECF29849BCFF2619A217D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EA1E6F4951792459AE089A34 /* overlay_soil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_soil.png; sourceTree = "<group>"; };
+		ED3E27F1F7EB8344700CF279 /* TerroirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerroirApp.swift; sourceTree = "<group>"; };
+		FD37287F85BDDF28F89CDB86 /* GeoCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoordinate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3FB9067C6FAD1DC05C7E256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68894AEFD38E0C44C04F8D7 /* FlatBuffers in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02A3DA0B248E42F5888519C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				808B2BE2F376DE56D0BCB845 /* EnrichmentData.swift */,
+				0BA21FD73CAA3A32C4DE9569 /* FlavorDimension.swift */,
+				FD37287F85BDDF28F89CDB86 /* GeoCoordinate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DE192BA13599B19AFE3F338 /* TerroirTests */ = {
+			isa = PBXGroup;
+			children = (
+				260841B0FEE228336FDB17C9 /* FlavorLookupTests.swift */,
+				CFEAFF41089BF9E12300FB9F /* GeoCoordinateTests.swift */,
+				85AC8D3FE4AF973870E5A313 /* OceanHandlerTests.swift */,
+				03619D6C90717EB43513EF75 /* TemplateEngineTests.swift */,
+			);
+			path = TerroirTests;
+			sourceTree = "<group>";
+		};
+		3552AFB1124A3A51E222BB94 /* Terroir */ = {
+			isa = PBXGroup;
+			children = (
+				8C5B5232DD795D3F266B3E4D /* App */,
+				CE22BBFEFAD16189976B5AAE /* Engine */,
+				CC06766031D60E989C1DC9EE /* Generated */,
+				02A3DA0B248E42F5888519C4 /* Models */,
+				ABDF25AB7AAD2409F6CC8E97 /* Services */,
+				DF33E3B30E8B2BF75760725E /* Views */,
+				10533A0BE9A95E2FE97E6FE6 /* Assets.xcassets */,
+				DC2ECF29849BCFF2619A217D /* Info.plist */,
+			);
+			path = Terroir;
+			sourceTree = "<group>";
+		};
+		3B9DD9838B774C6268E4063A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9028E7C76A8F8F653D7F221 /* globe_base.jpg */,
+				37D73445C6B80EC8F433F8F3 /* overlay_climate.png */,
+				EA1E6F4951792459AE089A34 /* overlay_soil.png */,
+				AD3E44D31AB8DEF0E22FAC1F /* overlay_vegetation.png */,
+				BBDE83E00E2DB47DBDCC3D54 /* terroir.bin */,
+			);
+			name = Resources;
+			path = Terroir/Resources;
+			sourceTree = "<group>";
+		};
+		4C43F54105CC7A432CB0508D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C246ACB806204FF4EC580EA /* Terroir.app */,
+				7415140AA5E320E99A2E790F /* TerroirTests.xctest */,
+				3B1610E4A51E4DC7DAFB0A58 /* TerroirUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C2C7AC355A6BE48733AF3B2 = {
+			isa = PBXGroup;
+			children = (
+				3B9DD9838B774C6268E4063A /* Resources */,
+				3552AFB1124A3A51E222BB94 /* Terroir */,
+				2DE192BA13599B19AFE3F338 /* TerroirTests */,
+				CBBDA5B74E02A80075B24282 /* TerroirUITests */,
+				4C43F54105CC7A432CB0508D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C5B5232DD795D3F266B3E4D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A34EDE8565A3F6AB16909284 /* AppState.swift */,
+				ED3E27F1F7EB8344700CF279 /* TerroirApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ABDF25AB7AAD2409F6CC8E97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4E79A75C2C1F5540FE31C578 /* EnrichmentService.swift */,
+				19774F8B322BCB2CF0654085 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CBBDA5B74E02A80075B24282 /* TerroirUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D61F7E62380B15785C2B313 /* TapToCardFlowTests.swift */,
+			);
+			path = TerroirUITests;
+			sourceTree = "<group>";
+		};
+		CC06766031D60E989C1DC9EE /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C1DC54F27118F375A39764DC /* terroir_generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		CE22BBFEFAD16189976B5AAE /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FF38F28740A3988842844 /* FlavorLookup.swift */,
+				08238812B86F523E6A09D2D6 /* FlavorVector.swift */,
+				8CE5B74B645A6452ED800523 /* OceanHandler.swift */,
+				76095E56B235CFB3F6FD555A /* TemplateEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		DF33E3B30E8B2BF75760725E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4AB05E3C78D69F8F9FB7EB7 /* FlavorCardDetailView.swift */,
+				A49ECAC1DA0519C5DC216841 /* FlavorCardView.swift */,
+				300168237FC933C0B1E8A852 /* GlobeScene.swift */,
+				2EDA64E804AFE1E425C26534 /* GlobeView.swift */,
+				37141BB4E5BBDC5D4018B9AF /* RadarChartView.swift */,
+				2FA893F483963D013F0135A9 /* ShareCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32F49EECB1504D1F92AB0D97 /* TerroirUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 895765D3BDDBCA93EB8AB396 /* Build configuration list for PBXNativeTarget "TerroirUITests" */;
+			buildPhases = (
+				291948D408C949E9DCE207EE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D3DAA630E7D9D94CDFB7C4B /* PBXTargetDependency */,
+			);
+			name = TerroirUITests;
+			packageProductDependencies = (
+			);
+			productName = TerroirUITests;
+			productReference = 3B1610E4A51E4DC7DAFB0A58 /* TerroirUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		460F17FA0BE75656E2160CBF /* Terroir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4E08566ADF1E7ACF013E730 /* Build configuration list for PBXNativeTarget "Terroir" */;
+			buildPhases = (
+				610C4A4F536F1FC27CE7F4AB /* Sources */,
+				0F3FCA56E94887655AED788A /* Resources */,
+				A3FB9067C6FAD1DC05C7E256 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Terroir;
+			packageProductDependencies = (
+				5516A5E122E79203C58180F6 /* FlatBuffers */,
+			);
+			productName = Terroir;
+			productReference = 4C246ACB806204FF4EC580EA /* Terroir.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8587A1AD38C0746E6DD1DA29 /* TerroirTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B1DA76BB4317C54AA392A78 /* Build configuration list for PBXNativeTarget "TerroirTests" */;
+			buildPhases = (
+				EA79954A02788C9861F852D6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93F94DB9EE4D8C0D49E4A298 /* PBXTargetDependency */,
+			);
+			name = TerroirTests;
+			packageProductDependencies = (
+			);
+			productName = TerroirTests;
+			productReference = 7415140AA5E320E99A2E790F /* TerroirTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F16CF9434975DD211656FB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					32F49EECB1504D1F92AB0D97 = {
+						TestTargetID = 460F17FA0BE75656E2160CBF;
+					};
+				};
+			};
+			buildConfigurationList = 74A5F6764DFAEDC4ED8DB75E /* Build configuration list for PBXProject "Terroir" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8C2C7AC355A6BE48733AF3B2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1A70098A657CD9049DC2A902 /* XCRemoteSwiftPackageReference "flatbuffers" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4C43F54105CC7A432CB0508D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				460F17FA0BE75656E2160CBF /* Terroir */,
+				8587A1AD38C0746E6DD1DA29 /* TerroirTests */,
+				32F49EECB1504D1F92AB0D97 /* TerroirUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F3FCA56E94887655AED788A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC08137F861C38A8CE0DBFB5 /* Assets.xcassets in Resources */,
+				45E98F0BF7998EA937E6BD60 /* globe_base.jpg in Resources */,
+				4D1EF5056CB80CF787809C19 /* overlay_climate.png in Resources */,
+				5CEAC275652FC2836BE05A9C /* overlay_soil.png in Resources */,
+				2C1F24C5495B49003EF939B7 /* overlay_vegetation.png in Resources */,
+				6A2D212DFE963ADCDFA17837 /* terroir.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		291948D408C949E9DCE207EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D086B86562B83D872AF8FB3B /* TapToCardFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		610C4A4F536F1FC27CE7F4AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A8C4894756412F1B61B527 /* AppState.swift in Sources */,
+				047A696C5A256BBB2526581A /* EnrichmentData.swift in Sources */,
+				895DA3E43CC79B1A4341C482 /* EnrichmentService.swift in Sources */,
+				D5447D7B033A53BD7CE5A0E4 /* FlavorCardDetailView.swift in Sources */,
+				AF3FFE8A5F4C4810055C37C9 /* FlavorCardView.swift in Sources */,
+				F721EABD58AF58CBB18A30F6 /* FlavorDimension.swift in Sources */,
+				44FC81075FF303879BB5CF2E /* FlavorLookup.swift in Sources */,
+				8A8BB5B8F1E6293C5FF63699 /* FlavorVector.swift in Sources */,
+				43AF73E82CE391592E684AD6 /* GeoCoordinate.swift in Sources */,
+				1F870F58DED034882E7AA273 /* GlobeScene.swift in Sources */,
+				8B2962F28749AA78954836FF /* GlobeView.swift in Sources */,
+				B406FB23B15F6B02A2ABE6D5 /* LocationService.swift in Sources */,
+				06B5961DE2FDBA09516FCDC5 /* OceanHandler.swift in Sources */,
+				D33853F5CABB8BDD0012CCF6 /* RadarChartView.swift in Sources */,
+				3C88BFC0487AAF01E6F5C0BC /* ShareCardView.swift in Sources */,
+				1220FDF510DDB726CA52E543 /* TemplateEngine.swift in Sources */,
+				4D004551865FA161692FE255 /* TerroirApp.swift in Sources */,
+				9E9C9B76E41A507F80A8BA1A /* terroir_generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA79954A02788C9861F852D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D114C7FAA57EC7B0D5AF70E /* FlavorLookupTests.swift in Sources */,
+				CA483298BCB837C87C1C1B44 /* GeoCoordinateTests.swift in Sources */,
+				77075E3DB717C5DD36564814 /* OceanHandlerTests.swift in Sources */,
+				DC240E4825678B7889EEBC2E /* TemplateEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D3DAA630E7D9D94CDFB7C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 460F17FA0BE75656E2160CBF /* Terroir */;
+			targetProxy = F1D683957CCEABC428312E1F /* PBXContainerItemProxy */;
+		};
+		93F94DB9EE4D8C0D49E4A298 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 460F17FA0BE75656E2160CBF /* Terroir */;
+			targetProxy = FC560A20F496A44C0F0F1C89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F1F69CE63D5D0312BE74432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		5DC7B1647CD6FE25ECCA1BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		886ED712BD1408C594A62407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.TerroirTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Terroir.app/Terroir";
+			};
+			name = Debug;
+		};
+		9240E4121922CA502CDFA596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.TerroirUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Terroir;
+			};
+			name = Release;
+		};
+		96AC9203D991549D61DB8B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.TerroirUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Terroir;
+			};
+			name = Debug;
+		};
+		AFC4C57F2159922B0E0D197F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Terroir/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCEEB0387F450D668B311FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.TerroirTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Terroir.app/Terroir";
+			};
+			name = Release;
+		};
+		E5ACA20D8CE4093FECF269AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Terroir/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B1DA76BB4317C54AA392A78 /* Build configuration list for PBXNativeTarget "TerroirTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886ED712BD1408C594A62407 /* Debug */,
+				BCEEB0387F450D668B311FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		74A5F6764DFAEDC4ED8DB75E /* Build configuration list for PBXProject "Terroir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC7B1647CD6FE25ECCA1BCD /* Debug */,
+				1F1F69CE63D5D0312BE74432 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		895765D3BDDBCA93EB8AB396 /* Build configuration list for PBXNativeTarget "TerroirUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AC9203D991549D61DB8B30 /* Debug */,
+				9240E4121922CA502CDFA596 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F4E08566ADF1E7ACF013E730 /* Build configuration list for PBXNativeTarget "Terroir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5ACA20D8CE4093FECF269AE /* Debug */,
+				AFC4C57F2159922B0E0D197F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A70098A657CD9049DC2A902 /* XCRemoteSwiftPackageReference "flatbuffers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/flatbuffers";
+			requirement = {
+				kind = exactVersion;
+				version = 25.12.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5516A5E122E79203C58180F6 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A70098A657CD9049DC2A902 /* XCRemoteSwiftPackageReference "flatbuffers" */;
+			productName = FlatBuffers;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5F16CF9434975DD211656FB8 /* Project object */;
+}
