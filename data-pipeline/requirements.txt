@@ -1,7 +1,7 @@
 # Core pipeline
 numpy>=1.26
 flatbuffers>=23.5
-lz4>=4.3
+lz4>=4.4.5
 scipy>=1.12
 Pillow>=10.3
 pyproj>=3.6
