@@ -1,14 +1,14 @@
 # Terroir — Portfolio Disposition
 
 **Status:** Active (iOS App Store prep arc) — SwiftUI iOS flavor-
-profile app with **complete Phases 1-3 iOS scaffold** and a
-**Phase 0 data pipeline** on canonical state. **Default branch is
-`feat/data-pipeline`** (origin/HEAD points here, not `main`) —
-**feat-branch-as-default trap variant**. App Store prep is
-**partial**: DEVELOPMENT_TEAM wired and PrivacyInfo.xcprivacy
-declared, but **`APPSTORE-METADATA.md` does NOT exist on either
-branch yet**. **Tenth iOS App Store cluster member, but the first
-classified as Active (prep arc in flight)**, not Release Frozen.
+profile app with **complete Phases 0–3** (data pipeline + iOS
+scaffold). App Store prep is **partial**: DEVELOPMENT_TEAM and
+PrivacyInfo.xcprivacy confirmed on `main`, but
+**`APPSTORE-METADATA.md` does NOT exist yet**. **Tenth iOS App
+Store cluster member, but the first classified as Active (prep arc
+in flight)**, not Release Frozen. *(Branch divergence documented
+below was resolved by `b95ab97 chore: merge feat/data-pipeline into
+main` — both branches are now unified on `main`.)*
 
 > Disposition uses strict `origin/HEAD` verification.
 > **Documents two new trap shapes**:
@@ -106,8 +106,8 @@ Terroir is **mid-prep**:
 
 | Signal | Other iOS cluster members | **Terroir** |
 |---|---|---|
-| DEVELOPMENT_TEAM | All ✓ | ✓ on `origin/main` (not on canonical default `feat/data-pipeline`) |
-| Privacy Manifest | All ✓ | ✓ on `origin/main` (same) |
+| DEVELOPMENT_TEAM | All ✓ | ✓ on `main` |
+| Privacy Manifest | All ✓ | ✓ on `main` |
 | APPSTORE-METADATA.md | All ✓ | **MISSING from both branches** |
 | Privacy policy | All ✓ | **MISSING from both branches** (only via the CI / MIT scaffolding) |
 | Branch divergence | None | **Divergent-branches trap** |
@@ -138,13 +138,8 @@ disposition lattice principle established by the PyPI cluster
 This row's blocker is **operator-side branch consolidation +
 metadata authoring**, not Apple credentials:
 
-1. **Resolve branch divergence.** Recommended path:
-   - Merge `origin/main` → `origin/feat/data-pipeline` (or
-     cherry-pick the 6 App Store prep commits). The OSS scaffolding
-     wave on `feat/data-pipeline` is broader; carrying that branch
-     forward as canonical is the right call.
-   - Update `origin/HEAD` if the operator decides `main` should be
-     the canonical default going forward.
+1. ~~**Resolve branch divergence.**~~ **DONE** — `b95ab97 chore:
+   merge feat/data-pipeline into main`.
 2. **Author `APPSTORE-METADATA.md`** with the identity / keywords /
    description / category / pricing fields. Follow the established
    pattern from R12-R14 iOS dispositions.
@@ -171,8 +166,8 @@ Chromafield / etc., plus the upfront branch merge work).
 |---|---|
 | Portfolio status | `Active (iOS App Store prep arc)` |
 | Distribution channel | **App Store Connect** (planned; not yet metadata-prepared) |
-| Current branch state | **DIVERGENT** — `origin/main` and `origin/feat/data-pipeline` have non-overlapping substantive commits |
-| Canonical default | `feat/data-pipeline` (per `origin/HEAD`) |
+| Current branch state | **Merged** — `feat/data-pipeline` merged into `main` (`b95ab97`); `main` is now canonical |
+| Canonical default | `main` (merged; see note above) |
 | Review cadence | Active — driven by branch consolidation + metadata authoring |
 | Resurface conditions | (a) Branch consolidation, (b) `APPSTORE-METADATA.md` authored, (c) full prep cadence applied, then transition to Release Frozen, or (d) decision to abandon iOS direction |
 | Co-batch with | iOS App Store cluster — **now 10 repos** (9 Release Frozen + 1 Active) |
@@ -210,10 +205,9 @@ These shapes belong on the cluster-taxonomy session-lessons list.
 
 ## Reactivation procedure
 
-1. **Re-confirm `origin/HEAD`** — `git ls-remote --symref origin
-   HEAD`. May change if operator updates default branch.
-2. **Resolve branch divergence** before any disposition / App
-   Store work. Decision: merge or cherry-pick.
+1. ~~**Re-confirm `origin/HEAD`**~~ **DONE** — `main` is now
+   canonical (`b95ab97` merge).
+2. ~~**Resolve branch divergence**~~ **DONE** — merged.
 3. Review stash `r14-terroir-stash` (CLAUDE.md mod, untracked
    `.claude/`).
 4. Once consolidated, follow the standard iOS App Store cluster
@@ -227,14 +221,13 @@ These shapes belong on the cluster-taxonomy session-lessons list.
 
 | Field | Value |
 |---|---|
-| `origin/HEAD` | `refs/heads/feat/data-pipeline` |
-| `origin/feat/data-pipeline` tip | `0336d15` chore: add initial CHANGELOG |
-| `origin/main` tip | `88ad7da` chore: add MIT license (has DEVELOPMENT_TEAM + PrivacyInfo.xcprivacy commits not in feat/data-pipeline) |
-| Default branch | **`feat/data-pipeline`** (NOT `main`) |
+| `origin/HEAD` | `refs/heads/main` (post-merge; branches unified) |
+| `origin/main` tip | `7b6b940` docs: lean CLAUDE.md (claude-md-lint) |
+| Default branch | **`main`** |
 | Build system | iOS / Swift / SwiftUI / XCTest + Python (data pipeline; numpy, pillow, rasterio per Dependabot configs) |
-| Phases shipped | Phase 0 (data pipeline) + Phases 1-3 (iOS app scaffold) per memory |
-| Release scaffolding state | **Partial — split across two divergent branches.** OSS scaffolding on `feat/data-pipeline`; App Store prep on `main`. Neither has `APPSTORE-METADATA.md`. |
-| Distribution channel (planned) | App Store Connect — pricing TBD |
-| Blocker | **Branch consolidation + APPSTORE-METADATA authoring (operator-only)** |
+| Phases shipped | Phases 0–3 (data pipeline + iOS scaffold) — all confirmed in code |
+| Release scaffolding state | **Partial.** DEVELOPMENT_TEAM + PrivacyInfo.xcprivacy present on `main`. `APPSTORE-METADATA.md` still missing. |
+| Distribution channel (planned) | App Store Connect — $4.99 one-time |
+| Blocker | **APPSTORE-METADATA authoring (operator-only)** |
 | Migration state | No `legacy-origin` remote |
 | Distinguishing feature | **Tenth iOS App Store cluster member AND first Active state in the cluster.** Introduces two new trap shapes: (1) origin/HEAD-on-feat-branch with substantive work split, (2) divergent-branches trap on origin (bilateral, not local-vs-origin). |
