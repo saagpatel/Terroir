@@ -13,6 +13,7 @@
 		1F870F58DED034882E7AA273 /* GlobeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300168237FC933C0B1E8A852 /* GlobeScene.swift */; };
 		2C1F24C5495B49003EF939B7 /* overlay_vegetation.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3E44D31AB8DEF0E22FAC1F /* overlay_vegetation.png */; };
 		3C88BFC0487AAF01E6F5C0BC /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA893F483963D013F0135A9 /* ShareCardView.swift */; };
+		3F6314CE4275A30021B02611 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 336F491AC261FD4D4429FD4C /* PrivacyInfo.xcprivacy */; };
 		43AF73E82CE391592E684AD6 /* GeoCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37287F85BDDF28F89CDB86 /* GeoCoordinate.swift */; };
 		44FC81075FF303879BB5CF2E /* FlavorLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FF38F28740A3988842844 /* FlavorLookup.swift */; };
 		45E98F0BF7998EA937E6BD60 /* globe_base.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9028E7C76A8F8F653D7F221 /* globe_base.jpg */; };
@@ -67,6 +68,7 @@
 		2EDA64E804AFE1E425C26534 /* GlobeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeView.swift; sourceTree = "<group>"; };
 		2FA893F483963D013F0135A9 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 		300168237FC933C0B1E8A852 /* GlobeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeScene.swift; sourceTree = "<group>"; };
+		336F491AC261FD4D4429FD4C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		37141BB4E5BBDC5D4018B9AF /* RadarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartView.swift; sourceTree = "<group>"; };
 		37D73445C6B80EC8F433F8F3 /* overlay_climate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_climate.png; sourceTree = "<group>"; };
 		3B1610E4A51E4DC7DAFB0A58 /* TerroirUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TerroirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 				37D73445C6B80EC8F433F8F3 /* overlay_climate.png */,
 				EA1E6F4951792459AE089A34 /* overlay_soil.png */,
 				AD3E44D31AB8DEF0E22FAC1F /* overlay_vegetation.png */,
+				336F491AC261FD4D4429FD4C /* PrivacyInfo.xcprivacy */,
 				BBDE83E00E2DB47DBDCC3D54 /* terroir.bin */,
 			);
 			name = Resources;
@@ -301,7 +304,14 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					32F49EECB1504D1F92AB0D97 = {
+						DevelopmentTeam = 3TGZFKFNA4;
 						TestTargetID = 460F17FA0BE75656E2160CBF;
+					};
+					460F17FA0BE75656E2160CBF = {
+						DevelopmentTeam = 3TGZFKFNA4;
+					};
+					8587A1AD38C0746E6DD1DA29 = {
+						DevelopmentTeam = 3TGZFKFNA4;
 					};
 				};
 			};
@@ -335,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC08137F861C38A8CE0DBFB5 /* Assets.xcassets in Resources */,
+				3F6314CE4275A30021B02611 /* PrivacyInfo.xcprivacy in Resources */,
 				45E98F0BF7998EA937E6BD60 /* globe_base.jpg in Resources */,
 				4D1EF5056CB80CF787809C19 /* overlay_climate.png in Resources */,
 				5CEAC275652FC2836BE05A9C /* overlay_soil.png in Resources */,
@@ -441,6 +452,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3TGZFKFNA4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -499,6 +511,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3TGZFKFNA4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -590,7 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saagarpatel.terroir;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -623,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terroir.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saagarpatel.terroir;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
