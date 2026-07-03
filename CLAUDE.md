@@ -46,3 +46,46 @@ See IMPLEMENTATION-ROADMAP.md for full phase details and acceptance criteria.
 - Do not use localStorage, UserDefaults, or CoreData — the flavor grid is a static bundled binary; no user data is persisted in v1
 - Do not add any third-party analytics, crash reporting, or tracking SDKs
 - Do not use bilinear interpolation for grid lookups — nearest-neighbor is locked and sufficient at 0.5° resolution
+
+<!-- portfolio-context:start -->
+# Portfolio Context
+
+## What This Project Is
+
+Terroir is a premium iOS app (Swift/SwiftUI + SceneKit) that translates real geographic and environmental data into flavor profiles using sommelier vocabulary. Users spin a 3D globe, tap any location on Earth, and receive a flavor card — a radial chart and templated prose built from soil type, climate, vegetation index, elevation, and coastal proximity. Targets $4.99 one-time pricing on the App Store.
+
+## Current State
+
+**Phase 0: Data Pipeline**
+See IMPLEMENTATION-ROADMAP.md for full phase details and acceptance criteria.
+
+## Stack
+
+- Language: Swift 5.10+
+- UI Framework: SwiftUI — iOS 16+ deployment target
+- 3D Globe: SceneKit — bundled with iOS, no third-party dependency
+- Binary Format: FlatBuffers 23.x — random-access offline flavor grid without full decompression
+- Compression: LZ4 via Apple's `Compression` framework (COMPRESSION_LZ4 mode)
+- Data Pipeline: Python 3.11+ with rasterio, numpy, pyproj (offline, not part of iOS build)
+- Enrichment Backend: CloudKit Functions (primary) / Vercel Edge Functions (fallback)
+- CI: Xcode Cloud
+
+## How To Run
+
+Build and run on simulator or device. The prebuilt `terroir.bin` is included — no data pipeline run required.
+
+## Known Risks
+
+- Do not open Xcode until Phase 0 (`terroir.bin`) is complete and passes validation — the data pipeline blocks all downstream iOS work
+- Do not add features not in the current phase of IMPLEMENTATION-ROADMAP.md
+- Do not use UIKit directly — globe is SCNView wrapped in UIViewRepresentable; all other UI is SwiftUI
+- Do not block the UI thread for flavor lookups — all file I/O and geocoder calls are async
+- Do not use localStorage, UserDefaults, or CoreData — the flavor grid is a static bundled binary; no user data is persisted in v1
+- Do not add any third-party analytics, crash reporting, or tracking SDKs
+- Do not use bilinear interpolation for grid lookups — nearest-neighbor is locked and sufficient at 0.5° resolution
+
+## Next Recommended Move
+
+Use this context plus the README and supporting docs to resume the next active task, then promote the repo beyond minimum-viable by capturing a dedicated handoff, roadmap, or discovery artifact.
+
+<!-- portfolio-context:end -->
