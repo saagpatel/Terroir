@@ -8,6 +8,39 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare generated resources
+        run: |
+          mkdir -p terroir-ios/Terroir/Resources
+          python3 - <<'PY'
+          from pathlib import Path
+
+          resources = Path("terroir-ios/Terroir/Resources")
+          resources.mkdir(parents=True, exist_ok=True)
+
+          # CI only needs the generated assets to exist so Xcode can build the
+          # app target. Production data remains generated outside git.
+          (resources / "terroir.bin").write_bytes((0).to_bytes(8, "little"))
+
+          png = bytes.fromhex(
+              "89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c489"
+              "0000000d49444154789c6360000002000100ffff03000006000557bfabd400000000"
+              "49454e44ae426082"
+          )
+          for name in ("overlay_soil.png", "overlay_climate.png", "overlay_vegetation.png"):
+              (resources / name).write_bytes(png)
+
+          jpg = bytes.fromhex(
+              "ffd8ffe000104a46494600010101006000600000ffdb004300030202030202030303"
+              "0304030304050805050404050a070706080c0a0c0c0b0a0b0b0d0e12100d0e110e0b"
+              "0b1016101113141515150c0f171816141812141514ffdb004301030404050405090505"
+              "09140d0b0d1414141414141414141414141414141414141414141414141414141414"
+              "141414141414141414141414141414141414141414ffc00011080001000103012200"
+              "021101031101ffc4001400010000000000000000000000000000000000008ffc400"
+              "14100100000000000000000000000000000000000000ffda000c0301000211031100"
+              "3f00b2c001ffd9"
+          )
+          (resources / "globe_base.jpg").write_bytes(jpg)
+          PY
       - name: Test
         run: |
           xcodebuild test \
