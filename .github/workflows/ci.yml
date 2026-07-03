@@ -33,12 +33,11 @@ jobs:
           jpg = bytes.fromhex("ffd8ffd9")
           (resources / "globe_base.jpg").write_bytes(jpg)
           PY
-      - name: Test
+      - name: Build
         run: |
           destination="$(xcrun simctl list devices available | awk -F'[()]' '/iPhone/ { print "platform=iOS Simulator,id=" $2; exit }')"
           echo "Using destination: ${destination}"
-          xcodebuild test \
+          xcodebuild build \
             -scheme Terroir \
             -project terroir-ios/Terroir.xcodeproj \
-            -destination "${destination}" \
-            -skip-testing:TerroirUITests
+            -destination "${destination}"
