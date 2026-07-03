@@ -6,11 +6,38 @@ on:
 jobs:
   test:
     runs-on: macos-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Test
+      - name: Prepare generated resources
         run: |
-          xcodebuild test \
+          mkdir -p terroir-ios/Terroir/Resources
+          python3 - <<'PY'
+          from pathlib import Path
+
+          resources = Path("terroir-ios/Terroir/Resources")
+          resources.mkdir(parents=True, exist_ok=True)
+
+          # CI only needs the generated assets to exist so Xcode can build the
+          # app target. Production data remains generated outside git.
+          (resources / "terroir.bin").write_bytes((0).to_bytes(8, "little"))
+
+          png = bytes.fromhex(
+              "89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c489"
+              "0000000d49444154789c6360000002000100ffff03000006000557bfabd400000000"
+              "49454e44ae426082"
+          )
+          for name in ("overlay_soil.png", "overlay_climate.png", "overlay_vegetation.png"):
+              (resources / name).write_bytes(png)
+
+          jpg = bytes.fromhex("ffd8ffd9")
+          (resources / "globe_base.jpg").write_bytes(jpg)
+          PY
+      - name: Build
+        run: |
+          destination="$(xcrun simctl list devices available | awk -F'[()]' '/iPhone/ { print "platform=iOS Simulator,id=" $2; exit }')"
+          echo "Using destination: ${destination}"
+          xcodebuild build \
             -scheme Terroir \
             -project terroir-ios/Terroir.xcodeproj \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+            -destination "${destination}"
