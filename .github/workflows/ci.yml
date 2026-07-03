@@ -34,7 +34,9 @@ jobs:
           PY
       - name: Test
         run: |
+          destination="$(xcrun simctl list devices available | awk -F'[()]' '/iPhone/ { print "platform=iOS Simulator,id=" $2; exit }')"
+          echo "Using destination: ${destination}"
           xcodebuild test \
             -scheme Terroir \
             -project terroir-ios/Terroir.xcodeproj \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+            -destination "${destination}"
