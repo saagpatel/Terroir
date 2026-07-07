@@ -12,4 +12,4 @@ requests>=2.34.2
 tqdm>=4.67.3
 
 # Testing
-pytest>=8.1
+pytest>=9.1.1
