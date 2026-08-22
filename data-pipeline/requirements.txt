@@ -9,7 +9,7 @@ rasterio>=1.5.0
 
 # Utilities
 requests>=2.34.2
-tqdm>=4.67.3
+tqdm>=4.70.0
 
 # Testing
 pytest>=9.1.1
