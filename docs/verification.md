@@ -6,14 +6,17 @@ and a Python data pipeline, not a Swift package: there is no root `Package.swift
 
 ## Safe pipeline smoke
 
-Use Python 3.12+ and an isolated virtual environment. The requirements file
-contains lower bounds, not a lock; dependency installation may download packages.
+Use Python 3.12 and uv with an isolated virtual environment. The source
+requirements retain their lower bounds; `requirements.lock` records exact
+versions and package hashes. The setup script installs from that lock and
+verifies a pinned FlatBuffers 25.12.19 compiler release checksum. Linux x86_64
+and macOS arm64/x86_64 are supported; other architectures fail explicitly.
+Installation downloads packages and the compiler, but never geographic data.
 From the repository root:
 
 ```sh
-python3 -m venv data-pipeline/venv
+bash data-pipeline/setup.sh
 . data-pipeline/venv/bin/activate
-python -m pip install -r data-pipeline/requirements.txt
 cd data-pipeline
 python -m pytest tests/test_flavor_engine.py -q
 ```
@@ -24,8 +27,9 @@ For validation or overlay changes, select the matching `tests/test_validate.py`
 or `tests/test_bake_overlays.py` module from this same directory.
 
 The broader suite includes encoding tests that import generated FlatBuffers
-bindings. Install the separate `flatc` compiler (the Python `flatbuffers` package
-is not the compiler), activate the environment, then from `data-pipeline/`:
+bindings. The setup script supplies `flatc` inside the virtual environment
+(the Python `flatbuffers` package alone is not the compiler). Activate the
+environment, then from `data-pipeline/`:
 
 ```sh
 make schema
@@ -41,6 +45,18 @@ Do not run `01_download_sources.sh`, `make run`, `make synthetic`, or cleanup
 just to verify instructions. They download data or write/replace generated
 outputs. Real-data accuracy and production resource generation are separate
 acceptance lanes; synthetic tests do not establish either.
+
+To deliberately refresh the lock after requirement changes, use uv 0.12.22:
+
+```sh
+uv pip compile data-pipeline/requirements.txt --universal --python-version 3.12 \
+  --generate-hashes -o data-pipeline/requirements.lock
+```
+
+Review the resulting graph and run the synthetic suite before committing.
+Re-running setup retains valid dependency/compiler caches; it synchronizes
+packages to the committed lock and rejects corrupt compiler archives. A Mac
+pass does not establish Linux or iOS runtime behavior.
 
 ## iOS build and behavior
 
