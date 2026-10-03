@@ -72,7 +72,7 @@ See IMPLEMENTATION-ROADMAP.md for full phase details and acceptance criteria.
 
 ## How To Run
 
-Build and run on simulator or device. The prebuilt `terroir.bin` is included — no data pipeline run required.
+See [verification guidance](docs/verification.md) for safe synthetic checks and iOS resource prerequisites. Generated `terroir.bin` and resources are ignored and must be prepared before running the app.
 
 ## Known Risks
 
