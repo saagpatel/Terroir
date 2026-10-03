@@ -4,6 +4,7 @@ data-pipeline/intermediate/
 data-pipeline/output/
 data-pipeline/Terroir/
 data-pipeline/venv/
+data-pipeline/.tools/
 *.npy
 terroir.bin
 terroir-ios/Terroir/Resources/
