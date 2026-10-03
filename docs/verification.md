@@ -62,8 +62,12 @@ xcodebuild build -project terroir-ios/Terroir.xcodeproj -scheme Terroir \
 
 For broader tests use `xcodebuild test` with the same project/scheme and an
 available named simulator or UUID (discover locally with `xcrun simctl list devices available`).
+The unit tests import `Testing`, so the test toolchain must provide Swift Testing.
 The `TerroirTests` and `TerroirUITests` targets live in the Xcode project, not a
 Swift package. For changed screens, exercise tap-to-card and sharing in the
-simulator with valid synthetic resources; avoid location permission and online
-More Detail/enrichment actions for an offline check. iOS has no browser lane.
+simulator with valid synthetic resources. More Detail uses bundled mock data,
+not a network backend. Globe taps await CLGeocoder reverse geocoding before
+showing the card; this may contact a service and falls back to coordinates on
+failure. Disable networking and avoid location permission for an offline check.
+iOS has no browser lane.
 No archive, signing, App Store upload or deployment is needed for local verification.

@@ -8,7 +8,7 @@ Terroir maps a 12-dimensional flavor profile — earthy, mineral, bright, citric
 
 ## Features
 
-- **Interactive 3D globe** — tap any point to retrieve its 12-axis flavor profile instantly
+- **Interactive 3D globe** — tap any point to retrieve its 12-axis flavor profile after lookup and reverse geocoding
 - **Radar chart** — visualizes the full flavor vector for the selected location
 - **Overlay modes** — toggle soil, climate, and vegetation layers on the globe
 - **Prebuilt binary grid** — 360×720 cell flavor grid (259,200 locations) compressed with LZ4 and loaded at launch
@@ -19,7 +19,7 @@ Terroir maps a 12-dimensional flavor profile — earthy, mineral, bright, citric
 
 ### Prerequisites
 - Xcode 15+, iOS 17.0+
-- XcodeGen (`brew install xcodegen`)
+- XcodeGen 2.35+ (`brew install xcodegen`), only when regenerating the project
 
 ### Installation
 ```bash
