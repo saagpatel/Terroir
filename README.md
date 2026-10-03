@@ -24,13 +24,23 @@ Terroir maps a 12-dimensional flavor profile — earthy, mineral, bright, citric
 ### Installation
 ```bash
 git clone https://github.com/saagpatel/Terroir.git
-cd Terroir
-xcodegen generate
+cd Terroir/terroir-ios
+# The checked-in project is usable; regenerate only after project.yml changes:
+# xcodegen generate
 open Terroir.xcodeproj
 ```
 
 ### Usage
-Build and run on simulator or device. The prebuilt `terroir.bin` is included — no data pipeline run required.
+Build and run on simulator or device after preparing the generated resources.
+`terroir.bin` and `terroir-ios/Terroir/Resources/` are ignored, not included in
+a fresh checkout. CI supplies placeholders for compilation only; those are not
+valid application data. See [verification and resource prerequisites](docs/verification.md)
+before running the app.
+
+## Verification
+
+See [docs/verification.md](docs/verification.md) for a safe synthetic pipeline smoke,
+the broader pipeline/iOS lanes and their prerequisites.
 
 ## Tech Stack
 
